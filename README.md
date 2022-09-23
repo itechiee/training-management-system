@@ -1,10 +1,10 @@
-Training Management System
+# Training Management System
 
-API Lists:
+## API Lists:
 
-Register User API:
-Requests:
-
+## Register User API:
+###### Requests:
+...
 {
     "name":"user",
     "email":"user@mail.com",
@@ -12,20 +12,24 @@ Requests:
     "username":"user",
     "password":"user"
 }
-
-Response:
+...
+###### Response:
+...
 {
     "message": "User is registered successfully",
     "success": true
 }
-
-Login User API
-Requests:
+...
+## Login User API
+###### Requests:
+...
 {
     "username": "user",
     "password": "user"
 }
-Response:
+...
+###### Response:
+...
 {
     "username": "user",
     "role": "user",
@@ -34,19 +38,20 @@ Response:
     "message": "Login success",
     "success": true
 }
+...
 
+# Protected API
 
-Protected API
--------------
+## Show Profile API
 
-Show Profile API
-
-Requests:
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
+...
     
-Response:
+###### Response:
+...
 {
     "user": {
         "_id": "632d11e6a862c86b10a71c23",
@@ -56,44 +61,53 @@ Response:
     },
     "message": "success"
 }
+...
 
-Update Profile API
-Requests:
+## Update Profile API
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
-Response:
+...
+###### Response:
+...
 {
     "message": "User is updated successfully",
     "success": true
 }
+...
 
-Update User Password API
-Requests:
+## Update User Password API
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
 
 {
     "password":"user2"
 }
-Response:
+...
+###### Response:
+...
 {
     "message": "User password is updated successfully",
     "success": true
 }
+...
 
-Add Subject API (Admin user)
-Requests:
+## Add Subject API (Admin user)
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
 
 {
     "subject": "Finance",
     "stream": "Commerce"
 }
-
-Response:
+...
+###### Response:
+...
 {
     "subject": "Finance",
     "stream": "Commerce",
@@ -103,14 +117,19 @@ Response:
     "updatedAt": "2022-09-23T01:58:41.994Z",
     "__v": 0
 }
+...
 
-List Subject with pagination API
+## List Subject with pagination API
+...
 URL: http://localhost:3000/subjects?page=1&limit=2&sort=asc
-Requests:
+...
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
-Response:
+...
+###### Response:
+...
 [
     {
         "_id": "632d01c27e421efa4dc66576",
@@ -131,9 +150,10 @@ Response:
         "__v": 0
     }
 ]
-
-Add Training API (Admin user)
-Requests:
+...
+## Add Training API (Admin user)
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
 
@@ -142,8 +162,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZ
   "subjects": ["Maths, Physics, English"],
   "type": "Basic"
 }
+...
 
-Response:
+###### Response:
+...
 {
     "courseName": "Basics of Engg",
     "subjects": [
@@ -156,14 +178,19 @@ Response:
     "updatedAt": "2022-09-23T02:00:20.064Z",
     "__v": 0
 }
+...
 
-List Trainings with pagination API
+## List Trainings with pagination API
+...
 URL: http://localhost:3000/trainings?page=1&limit=5&sort=asc
-Requests:
+###### Requests:
+
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
 
-Response:
+...
+###### Response:
+...
 [
     {
         "_id": "632d07690ab9717f5f540ed1",
@@ -194,14 +221,19 @@ Response:
         "__v": 0
     }
 ]
+...
 
-List Trainings filter by subjects API
+## List Trainings filter by subjects API
+...
 URL: http://localhost:3000/trainings?page=1&limit=5&sort=asc&filterBy=subjects&filterValue=Math
-Requests:
+...
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
-Response:
+...
+###### Response:
+...
 [
     {
         "_id": "632d07690ab9717f5f540ed1",
@@ -230,14 +262,19 @@ Response:
         "__v": 0
     }
 ]
+...
 
-List Trainings filter by stream API
+## List Trainings filter by stream API
+...
 URL: http://localhost:3000/trainings?page=1&limit=5&sort=asc&filterBy=stream&filterValue=det
-Requests:
+...
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
-Response:
+...
+###### Response:
+...
 [
     {
         "_id": "632d07690ab9717f5f540ed1",
@@ -400,16 +437,19 @@ Response:
         "subj": []
     }
 ]
+...
 
-
-List Trainings filter by type API
+## List Trainings filter by type API
+...
 URL: http://localhost:3000/trainings?page=1&limit=2&sort=asc&filterBy=typefilterValue=det
-Requests:
+...
+###### Requests:
+...
 Header: 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMyZDExZTZhODYyYzg2YjEwYTcxYzIzIiwicm9sZSI6InVzZXIiLCJ1c2VybmFtZSI6InVzZXIiLCJlbWFpbCI6InVzZXJAbWFpbC5jb20iLCJpYXQiOjE2NjM4OTgxMTYsImV4cCI6MTY2NDUwMjkxNn0.1-agLO6xtH2JXR7U9v6f4WxmIhWbppzxXe_wMHX0kNQ
-
-Response:
-
+...
+###### Response:
+...
 [
     {
         "_id": "632d07690ab9717f5f540ed1",
@@ -440,4 +480,4 @@ Response:
         "__v": 0
     }
 ]
-
+...
